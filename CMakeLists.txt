@@ -18,11 +18,15 @@ FetchContent_MakeAvailable(googletest)
 add_library(nQueensLib nqueens.cpp nqueens.h)
 
 # Créer l'exécutable principal
-add_executable(nQueens main.cpp)
+add_executable(nQueens main.cpp
+        nqueens.cpp
+        nqueens.h)
 target_link_libraries(nQueens PRIVATE nQueensLib)
 
 # Créer l'exécutable de test
-add_executable(nQueens_test test_nqueens.cpp)
+add_executable(nQueens_test test_nqueens.cpp
+        nqueens.cpp
+        nqueens.h)
 target_link_libraries(nQueens_test PRIVATE nQueensLib GTest::gtest_main)
 
 include(GoogleTest)
