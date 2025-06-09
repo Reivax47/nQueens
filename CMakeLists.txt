@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.31)
 project(nQueens)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
 # Activer les tests
 enable_testing()
