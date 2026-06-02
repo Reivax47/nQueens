@@ -44,13 +44,10 @@ int processeNqueens(std::vector<int> &board, const int column, const int nbReine
     int somme = 0;
 
     for (int i = 0 ; i < nbReines ; i++) {
-
             board.at(column) = i;
             if (isValable(board, column)) {
                 somme += processeNqueens(board, column + 1, nbReines);
             }
-
-
     }
     return somme;
 }

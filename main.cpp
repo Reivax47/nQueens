@@ -7,13 +7,13 @@ int main() {
     const auto start = std::chrono::high_resolution_clock::now();
     
     // Votre calcul à mesurer
-    const auto result = nQueens(13);
+    const auto result = nQueens(14);
     
     // Point de fin de la mesure
     const auto end = std::chrono::high_resolution_clock::now();
     
     // Calcul de la durée (en millisecondes)
-    std::chrono::duration<double, std::milli> duration = end - start;
+    const std::chrono::duration<double, std::milli> duration = end - start;
     
     // Affichage du résultat et du temps d'exécution
     std::cout << "Résultat : " << result << std::endl;
